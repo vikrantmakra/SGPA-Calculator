@@ -24,9 +24,21 @@ app.post("/",function(req,res){
     }if(sem==4 && branch=="EE"){
         res.redirect("/secondYearEE");
     }if(sem==4 && branch=="ME"){
-        res.redirect("/secondYearME")
+        res.redirect("/secondYearME");
     }if(sem==4 && branch=="CV"){
-        res.redirect("/secondYearCV")
+        res.redirect("/secondYearCV");
+    }if(sem==6 && branch=="CS"){
+        res.redirect("/thirdYearCS");
+    }if(sem==6 && branch=="IS"){
+        res.redirect("/thirdYearIS")
+    }if(sem==6 && branch=="EC"){
+        res.redirect("/thirdYearEC")
+    }if(sem==6 && branch=="EE"){
+        res.redirect("/thirdYearEE")
+    }if(sem==6 && branch=="ME"){
+        res.redirect("/thirdYearME")
+    }if(sem==6 && branch=="CV"){
+        res.redirect("/thirdYearCV")
     }
     else{
         res.send("Enter A Valid Even Sem")
@@ -59,7 +71,7 @@ app.post("/firstYear",function(req,res){
 
 app.get("/secondYearCS",function(req,res){
 
-    res.sendFile(__dirname+"/secondYearCS.html")
+    res.sendFile(__dirname+"/Second-Year/secondYearCS.html")
 });
 
 app.post("/secondYearCS",function(req,res){
@@ -81,7 +93,7 @@ app.post("/secondYearCS",function(req,res){
 
 app.get("/secondYearEC",function(req,res){
 
-    res.sendFile(__dirname+"/secondYearEC.html")
+    res.sendFile(__dirname+"/Second-Year/secondYearEC.html")
 });
 
 app.post("/secondYearEC",function(req,res){
@@ -103,7 +115,7 @@ app.post("/secondYearEC",function(req,res){
 
 app.get("/secondYearEE",function(req,res){
 
-    res.sendFile(__dirname+"/secondYearEE.html")
+    res.sendFile(__dirname+"/Second-Year/secondYearEE.html")
 });
 
 app.post("/secondYearEE",function(req,res){
@@ -125,7 +137,7 @@ app.post("/secondYearEE",function(req,res){
 
 app.get("/secondYearME",function(req,res){
 
-    res.sendFile(__dirname+"/secondYearME.html")
+    res.sendFile(__dirname+"/Second-Year/secondYearME.html")
 });
 
 app.post("/secondYearME",function(req,res){
@@ -147,7 +159,7 @@ app.post("/secondYearME",function(req,res){
 
 app.get("/secondYearCV",function(req,res){
 
-    res.sendFile(__dirname+"/secondYearCV.html")
+    res.sendFile(__dirname+"/Second-Year/secondYearCV.html")
 });
 
 app.post("/secondYearCV",function(req,res){
@@ -166,6 +178,137 @@ app.post("/secondYearCV",function(req,res){
     console.log(S1,S2,S3,S4,S5,S6,S7,S8,S9,psem);
     res.send("Marks posted");
 });
+
+app.get("/thirdYearCS",function(req,res){
+
+    res.sendFile(__dirname+"/Third-Year/thirdYearCS.html");
+
+});
+
+app.post("/thirdYearCS",function(req,res){
+
+    var S1=req.body.sub1;
+    var S2=req.body.sub2;
+    var S3=req.body.sub3;
+    var S4=req.body.sub4;
+    var S5=req.body.sub5;
+    var S6=req.body.sub6;
+    var S7=req.body.sub7;
+    var S8=req.body.sub8;
+    var psem=req.body.psem;
+
+    console.log(S1,S2,S3,S4,S5,S6,S7,S8,psem);
+    res.send("Marks posted");
+});
+
+app.get("/thirdYearIS",function(req,res){
+
+    res.sendFile(__dirname+"/Third-Year/thirdYearIS.html")
+});
+
+app.post("/thirdYearIS",function(req,res){
+
+    var S1=req.body.sub1;
+    var S2=req.body.sub2;
+    var S3=req.body.sub3;
+    var S4=req.body.sub4;
+    var S5=req.body.sub5;
+    var S6=req.body.sub6;
+    var S7=req.body.sub7;
+    var S8=req.body.sub8;
+    var psem=req.body.psem;
+
+    console.log(S1,S2,S3,S4,S5,S6,S7,S8,psem);
+    res.send("Marks posted");
+});
+
+app.get("/thirdYearEC",function(req,res){
+
+    res.sendFile(__dirname+"/Third-Year/thirdYearEC.html")
+});
+
+app.post("/thirdYearEC",function(req,res){
+
+    var S1=req.body.sub1;
+    var S2=req.body.sub2;
+    var S3=req.body.sub3;
+    var S4=req.body.sub4;
+    var S5=req.body.sub5;
+    var S6=req.body.sub6;
+    var S7=req.body.sub7;
+    var S8=req.body.sub8;
+    var psem=req.body.psem;
+
+    console.log(S1,S2,S3,S4,S5,S6,S7,S8,psem);
+    res.send("Marks posted");
+});
+
+app.get("/thirdYearEE",function(req,res){
+
+    res.sendFile(__dirname+"/Third-Year/thirdYearEE.html")
+});
+
+app.post("/thirdYearEE",function(req,res){
+
+    var S1=req.body.sub1;
+    var S2=req.body.sub2;
+    var S3=req.body.sub3;
+    var S4=req.body.sub4;
+    var S5=req.body.sub5;
+    var S6=req.body.sub6;
+    var S7=req.body.sub7;
+    var S8=req.body.sub8;
+    var psem=req.body.psem;
+
+    console.log(S1,S2,S3,S4,S5,S6,S7,S8,psem);
+    res.send("Marks posted");
+});
+
+app.get("/thirdYearME",function(req,res){
+
+    res.sendFile(__dirname+"/Third-Year/thirdYearME.html")
+});
+
+app.post("/thirdYearME",function(req,res){
+
+    var S1=req.body.sub1;
+    var S2=req.body.sub2;
+    var S3=req.body.sub3;
+    var S4=req.body.sub4;
+    var S5=req.body.sub5;
+    var S6=req.body.sub6;
+    var S7=req.body.sub7;
+    var S8=req.body.sub8;
+    var psem=req.body.psem;
+
+    console.log(S1,S2,S3,S4,S5,S6,S7,S8,psem);
+    res.send("Marks posted");
+});
+
+app.get("/thirdYearCV",function(req,res){
+
+    res.sendFile(__dirname+"/Third-Year/thirdYearCV.html")
+});
+
+app.post("/thirdYearCV",function(req,res){
+
+    var S1=req.body.sub1;
+    var S2=req.body.sub2;
+    var S3=req.body.sub3;
+    var S4=req.body.sub4;
+    var S5=req.body.sub5;
+    var S6=req.body.sub6;
+    var S7=req.body.sub7;
+    var S8=req.body.sub8;
+    var psem=req.body.psem;
+
+    console.log(S1,S2,S3,S4,S5,S6,S7,S8,psem);
+    res.send("Marks posted");
+});
+
+
+
+
 
 
 
