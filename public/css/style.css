@@ -2,7 +2,7 @@
 
 .form-group {
     width: 35%;
-	height: 41%;
+	 height: 60%;
     /* max-width: 330px; */
     padding: 15px;
     position: absolute;
@@ -30,7 +30,7 @@
     text-align: center;
     font-family: 'Merienda One', cursive;
     width: 35%;
-	height: 54%;
+	height: 80%;
     /* max-width: 330px; */
     padding: 15px;
     position: absolute;
