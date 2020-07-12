@@ -41,7 +41,8 @@ app.post("/",function(req,res){
         res.redirect("/thirdYearCV")
     }
     else{
-        res.send("Enter A Valid Even Sem")
+         res.send(("Enter A Valid Even Sem"));
+        
     }
 
     
@@ -64,8 +65,14 @@ app.post("/firstYear",function(req,res){
     var S8=req.body.sub8;
     var psem=req.body.psem;
 
-    console.log(S1,S2,S3,S4,S5,S6,S7,S8,psem);
-    res.send("Marks posted");
+    marks=[];
+
+    marks.push(S1,S2,S3,S4,S5,S6,S7,S8);
+
+    console.log(marks,psem);
+    length=marks.length;
+    var sum=calculateMarks(marks,length)
+    res.send("Marks posted and Sum ="+sum);
  
 });
 
@@ -87,8 +94,14 @@ app.post("/secondYearCS",function(req,res){
     var S9 =req.body.sub9;
     var psem=req.body.psem;
 
-    console.log(S1,S2,S3,S4,S5,S6,S7,S8,S9,psem);
-    res.send("Marks posted");
+    marks=[];
+
+    marks.push(S1,S2,S3,S4,S5,S6,S7,S8,S9);
+
+    console.log(marks,psem);
+    length=marks.length;
+    var sum=calculateMarks(marks,length)
+    res.send("Marks posted and Sum ="+sum);
 });
 
 app.get("/secondYearEC",function(req,res){
@@ -109,8 +122,14 @@ app.post("/secondYearEC",function(req,res){
     var S9 =req.body.sub9;
     var psem=req.body.psem;
 
-    console.log(S1,S2,S3,S4,S5,S6,S7,S8,S9,psem);
-    res.send("Marks posted");
+    marks=[];
+
+    marks.push(S1,S2,S3,S4,S5,S6,S7,S8,S9);
+
+    console.log(marks,psem);
+    length=marks.length;
+    var sum=calculateMarks(marks,length)
+    res.send("Marks posted and Sum ="+sum);
 });
 
 app.get("/secondYearEE",function(req,res){
@@ -131,8 +150,15 @@ app.post("/secondYearEE",function(req,res){
     var S9 =req.body.sub9;
     var psem=req.body.psem;
 
-    console.log(S1,S2,S3,S4,S5,S6,S7,S8,S9,psem);
-    res.send("Marks posted");
+    
+    marks=[];
+
+    marks.push(S1,S2,S3,S4,S5,S6,S7,S8,S9);
+
+    console.log(marks,psem);
+    length=marks.length;
+    var sum=calculateMarks(marks,length)
+    res.send("Marks posted and Sum ="+sum);
 });
 
 app.get("/secondYearME",function(req,res){
@@ -153,8 +179,14 @@ app.post("/secondYearME",function(req,res){
     var S9 =req.body.sub9;
     var psem=req.body.psem;
 
-    console.log(S1,S2,S3,S4,S5,S6,S7,S8,S9,psem);
-    res.send("Marks posted");
+    marks=[];
+
+    marks.push(S1,S2,S3,S4,S5,S6,S7,S8,S9);
+
+    console.log(marks,psem);
+    length=marks.length;
+    var sum=calculateMarks(marks,length)
+    res.send("Marks posted and Sum ="+sum);
 });
 
 app.get("/secondYearCV",function(req,res){
@@ -175,8 +207,14 @@ app.post("/secondYearCV",function(req,res){
     var S9 =req.body.sub9;
     var psem=req.body.psem;
 
-    console.log(S1,S2,S3,S4,S5,S6,S7,S8,S9,psem);
-    res.send("Marks posted");
+    marks=[];
+
+    marks.push(S1,S2,S3,S4,S5,S6,S7,S8,S9);
+
+    console.log(marks,psem);
+    length=marks.length;
+    var sum=calculateMarks(marks,length)
+    res.send("Marks posted and Sum ="+sum);
 });
 
 app.get("/thirdYearCS",function(req,res){
@@ -197,8 +235,14 @@ app.post("/thirdYearCS",function(req,res){
     var S8=req.body.sub8;
     var psem=req.body.psem;
 
-    console.log(S1,S2,S3,S4,S5,S6,S7,S8,psem);
-    res.send("Marks posted");
+    marks=[];
+
+    marks.push(S1,S2,S3,S4,S5,S6,S7,S8);
+
+    console.log(marks,psem);
+    length=marks.length;
+    var sum=calculateMarks(marks,length)
+    res.send("Marks posted and Sum ="+sum);
 });
 
 app.get("/thirdYearIS",function(req,res){
@@ -218,8 +262,14 @@ app.post("/thirdYearIS",function(req,res){
     var S8=req.body.sub8;
     var psem=req.body.psem;
 
-    console.log(S1,S2,S3,S4,S5,S6,S7,S8,psem);
-    res.send("Marks posted");
+    marks=[];
+
+    marks.push(S1,S2,S3,S4,S5,S6,S7,S8);
+
+    console.log(marks,psem);
+    length=marks.length;
+    var sum=calculateMarks(marks,length)
+    res.send("Marks posted and Sum ="+sum);
 });
 
 app.get("/thirdYearEC",function(req,res){
@@ -239,8 +289,14 @@ app.post("/thirdYearEC",function(req,res){
     var S8=req.body.sub8;
     var psem=req.body.psem;
 
-    console.log(S1,S2,S3,S4,S5,S6,S7,S8,psem);
-    res.send("Marks posted");
+    marks=[];
+
+    marks.push(S1,S2,S3,S4,S5,S6,S7,S8);
+
+    console.log(marks,psem);
+    length=marks.length;
+    var sum=calculateMarks(marks,length)
+    res.send("Marks posted and Sum ="+sum);
 });
 
 app.get("/thirdYearEE",function(req,res){
@@ -260,8 +316,14 @@ app.post("/thirdYearEE",function(req,res){
     var S8=req.body.sub8;
     var psem=req.body.psem;
 
-    console.log(S1,S2,S3,S4,S5,S6,S7,S8,psem);
-    res.send("Marks posted");
+    marks=[];
+
+    marks.push(S1,S2,S3,S4,S5,S6,S7,S8);
+
+    console.log(marks,psem);
+    length=marks.length;
+    var sum=calculateMarks(marks,length)
+    res.send("Marks posted and Sum ="+sum);
 });
 
 app.get("/thirdYearME",function(req,res){
@@ -281,8 +343,16 @@ app.post("/thirdYearME",function(req,res){
     var S8=req.body.sub8;
     var psem=req.body.psem;
 
-    console.log(S1,S2,S3,S4,S5,S6,S7,S8,psem);
-    res.send("Marks posted");
+    
+
+    marks=[];
+
+    marks.push(S1,S2,S3,S4,S5,S6,S7,S8);
+
+    console.log(marks,psem);
+    length=marks.length;
+    var sum=calculateMarks(marks,length)
+    res.send("Marks posted and Sum ="+sum);
 });
 
 app.get("/thirdYearCV",function(req,res){
@@ -302,17 +372,27 @@ app.post("/thirdYearCV",function(req,res){
     var S8=req.body.sub8;
     var psem=req.body.psem;
 
-    console.log(S1,S2,S3,S4,S5,S6,S7,S8,psem);
-    res.send("Marks posted");
+    
+    marks=[];
+
+    marks.push(S1,S2,S3,S4,S5,S6,S7,S8);
+
+    console.log(marks,psem);
+
+    length=marks.length;
+    var sum=calculateMarks(marks,length)
+    res.send("Marks posted and Sum ="+sum);
 });
 
-
-
-
-
-
-
-
+function calculateMarks(marks,length){
+     
+    var total=0;
+    for(var i=0;i<length;i++)
+    {
+        total=total+Number(marks[i]);
+    }
+    return total;
+}
 
 app.listen(3000,function(){
     console.log("Server up and runing at port 3000");
