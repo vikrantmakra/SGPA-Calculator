@@ -21,9 +21,7 @@
     border-radius: 22px;
   }
  
-  .form-control{
-
-  }
+  
   
   .form-group2{
    
@@ -75,4 +73,25 @@
       color: rgba(162, 141, 241, 0.911);
       font-size: 10pt;
     }
+  }
+
+  .result-box{
+    margin: auto;
+    padding-top: 35%;
+  }
+  .result-heading{
+    margin-top: 20px;
+  }
+
+  .box{
+    background: linear-gradient(-240deg,rgb(102, 8, 71) 10%, rgb(21, 1, 41) 90%, rgba(168, 4, 95, 0.89) 30%);
+  }
+
+  .contact{
+    padding-top: 20%;
+    margin-bottom: 0px;
+  }
+
+  .icon{
+    margin-top:0px;
   }

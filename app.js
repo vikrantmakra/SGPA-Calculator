@@ -2,8 +2,14 @@ const express=require("express");
 const bodyParser=require("body-parser");
 
 const app=express();
+
+app.set("view engine","ejs");
+
 app.use(express.static("public"));
+
 app.use(bodyParser.urlencoded({extended:true}));
+
+
 
 app.get("/",function(req,res){
     res.sendFile(__dirname+"/firstPage.html")
@@ -67,8 +73,12 @@ app.post("/firstYear",function(req,res){
 
     arrayMarks1(2,S1,S2,S3,S4,S5,S6,S7,S8,psem);
     length=marks.length;
-    var sum=calculateMarks(marks,length)
-    res.send("Marks posted and Sum ="+sum);
+    var sum=calculateMarks(2,marks,length,psem);
+    res.render("result",{
+        result:sum
+    });
+    
+    // res.send("Marks posted and SGPA="+sum);
  
 });
 
@@ -92,8 +102,10 @@ app.post("/secondYearCS",function(req,res){
 
     arrayMarks2(4,S1,S2,S3,S4,S5,S6,S7,S8,S9,psem);
     length=marks.length;
-    var sum=calculateMarks(marks,length)
-    res.send("Marks posted and Sum ="+sum);
+    var sum=calculateMarks(4,marks,length,psem);
+    res.render("result",{
+        result:sum
+    });
 });
 
 app.get("/secondYearEC",function(req,res){
@@ -116,8 +128,10 @@ app.post("/secondYearEC",function(req,res){
 
     arrayMarks2(4,S1,S2,S3,S4,S5,S6,S7,S8,S9,psem);
     length=marks.length;
-    var sum=calculateMarks(marks,length)
-    res.send("Marks posted and Sum ="+sum);
+    var sum=calculateMarks(4,marks,length,psem);
+    res.render("result",{
+        result:sum
+    });
 });
 
 app.get("/secondYearEE",function(req,res){
@@ -141,8 +155,10 @@ app.post("/secondYearEE",function(req,res){
     
     arrayMarks2(4,S1,S2,S3,S4,S5,S6,S7,S8,S9,psem);
     length=marks.length;
-    var sum=calculateMarks(marks,length)
-    res.send("Marks posted and Sum ="+sum);
+    var sum=calculateMarks(1,marks,length,psem);
+    res.render("result",{
+        result:sum
+    });
 });
 
 app.get("/secondYearME",function(req,res){
@@ -165,8 +181,10 @@ app.post("/secondYearME",function(req,res){
 
     arrayMarks2(4,S1,S2,S3,S4,S5,S6,S7,S8,S9,psem);
     length=marks.length;
-    var sum=calculateMarks(marks,length)
-    res.send("Marks posted and Sum ="+sum);
+    var sum=calculateMarks(4,marks,length,psem);
+    res.render("result",{
+        result:sum
+    });
 });
 
 app.get("/secondYearCV",function(req,res){
@@ -189,8 +207,10 @@ app.post("/secondYearCV",function(req,res){
 
     arrayMarks2(4,S1,S2,S3,S4,S5,S6,S7,S8,S9,psem);
     length=marks.length;
-    var sum=calculateMarks(marks,length)
-    res.send("Marks posted and Sum ="+sum);
+    var sum=calculateMarks(4,marks,length,psem);
+    res.render("result",{
+        result:sum
+    });
 });
 
 app.get("/thirdYearCS",function(req,res){
@@ -213,8 +233,10 @@ app.post("/thirdYearCS",function(req,res){
 
     arrayMarks1(6,S1,S2,S3,S4,S5,S6,S7,S8,psem);
     length=marks.length;
-    var sum=calculateMarks(marks,length)
-    res.send("Marks posted and Sum ="+sum);
+    var sum=calculateMarks(6,marks,length,psem);
+    res.render("result",{
+        result:sum
+    });
 });
 
 app.get("/thirdYearIS",function(req,res){
@@ -236,8 +258,10 @@ app.post("/thirdYearIS",function(req,res){
 
     arrayMarks1(6,S1,S2,S3,S4,S5,S6,S7,S8,psem);
     length=marks.length;
-    var sum=calculateMarks(marks,length)
-    res.send("Marks posted and Sum ="+sum);
+    var sum=calculateMarks(6,marks,length,psem)
+    res.render("result",{
+        result:sum
+    });
 });
 
 app.get("/thirdYearEC",function(req,res){
@@ -259,8 +283,10 @@ app.post("/thirdYearEC",function(req,res){
 
     arrayMarks1(6,S1,S2,S3,S4,S5,S6,S7,S8,psem);
     length=marks.length;
-    var sum=calculateMarks(marks,length)
-    res.send("Marks posted and Sum ="+sum);
+    var sum=calculateMarks(6,marks,length,psem)
+    res.render("result",{
+        result:sum
+    });
 });
 
 app.get("/thirdYearEE",function(req,res){
@@ -282,8 +308,10 @@ app.post("/thirdYearEE",function(req,res){
 
     arrayMarks1(6,S1,S2,S3,S4,S5,S6,S7,S8,psem);
     length=marks.length;
-    var sum=calculateMarks(marks,length)
-    res.send("Marks posted and Sum ="+sum);
+    var sum=calculateMarks(6,marks,length,psem)
+    res.render("result",{
+        result:sum
+    });
 });
 
 app.get("/thirdYearME",function(req,res){
@@ -307,8 +335,10 @@ app.post("/thirdYearME",function(req,res){
 
     arrayMarks1(6,S1,S2,S3,S4,S5,S6,S7,S8,psem);
     length=marks.length;
-    var sum=calculateMarks(marks,length)
-    res.send("Marks posted and Sum ="+sum);
+    var sum=calculateMarks(6,marks,length,psem)
+    res.render("result",{
+        result:sum
+    });
 });
 
 app.get("/thirdYearCV",function(req,res){
@@ -334,8 +364,10 @@ app.post("/thirdYearCV",function(req,res){
     arrayMarks1(6,S1,S2,S3,S4,S5,S6,S7,S8,psem);
 
     length=marks.length;
-    var sum=calculateMarks(marks,length)
-    res.send("Marks posted and Sum ="+sum);
+    var sum=calculateMarks(6,marks,length,psem)
+    res.render("result",{
+        result:sum
+    });
 });
 
 function arrayMarks1(sem,S1,S2,S3,S4,S5,S6,S7,S8,psem){
@@ -365,14 +397,62 @@ function arrayMarks2(sem,S1,S2,S3,S4,S5,S6,S7,S8,S9,psem){
 
 }
 
-function calculateMarks(marks,length){
-     
-    var total=0;
-    for(var i=0;i<length;i++)
-    {
-        total=total+Number(marks[i]);
+function calculateMarks(sem,marks,length,psem){
+    var points= []; 
+    if(sem==2){
+         for(i=0;i<length;i++){
+            var percent=(Number(marks[i])/40)*100;
+             points[i]=Math.ceil(percent/10);
+         }
+    console.log(points);
+        
+    var presentSGPA=(points[0]*4+points[1]*4+points[2]*3+points[3]*3+points[4]*3+points[5]*1+points[6]*1+points[7]*1)/20;
+    
+    var SGPA=(psem/2)+(presentSGPA/2);
+        
+    return SGPA;
     }
-    return total;
+    if(sem==6){
+        for(i=0;i<length;i++){
+           var percent=(Number(marks[i])/40)*100;
+            points[i]=Math.ceil(percent/10);
+         }
+        console.log(points);
+
+        var presentSGPA=(points[0]*4+points[1]*4+points[2]*4+points[3]*3+points[4]*3+points[5]*2+points[6]*2+points[7]*2)/24;
+
+        var SGPA=(psem/2)+(presentSGPA/2);
+
+        return SGPA
+    }
+    if(sem==4){
+        for(i=0;i<length;i++){
+            var percent=(Number(marks[i])/40)*100;
+             points[i]=Math.ceil(percent/10);
+          }
+          console.log(points); 
+
+          var presentSGPA=(points[0]*3+points[1]*4+points[2]*3+points[3]*3+points[4]*3+points[5]*3+points[6]*2+points[7]*2+points[8]*1)/24;
+
+          var SGPA=(psem/2)+(presentSGPA/2);
+
+          return SGPA;
+
+    }
+    if(sem==1){
+        for(i=0;i<length;i++){
+            var percent=(Number(marks[i])/40)*100;
+             points[i]=Math.ceil(percent/10);
+          }
+          console.log(points); 
+
+          var presentSGPA=(points[0]*3+points[1]*3+points[2]*4+points[3]*3+points[4]*3+points[5]*3+points[6]*2+points[7]*2+points[8]*1)/24;
+
+          var SGPA=(psem/2)+(presentSGPA/2);
+
+          return SGPA;
+
+    }
 }
 
 app.listen(3000,function(){
